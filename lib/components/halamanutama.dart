@@ -2,14 +2,8 @@ import 'package:faker/faker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class Chatapp extends StatefulWidget {
-  @override
-  State<Chatapp> createState() => _ChatappState();
-}
-
-class _ChatappState extends State<Chatapp> {
+class Chatapp extends StatelessWidget{
   var isonclick = false;
-  var color;
 
   var faker = new Faker();
 
@@ -63,13 +57,6 @@ class _ChatappState extends State<Chatapp> {
                     style: TextStyle(fontSize: 20),
                   ),
                 ),
-                Switch(
-                    value: isonclick,
-                    onChanged: (isonclick) {
-                      setState(() {
-                        isonclick = !isonclick;
-                      });
-                    }),
                 TextButton(
                     onPressed: () {
                       Navigator.of(context).pop();
@@ -142,11 +129,7 @@ class _ChatappState extends State<Chatapp> {
                 );
               }),
           floatingActionButton: FloatingActionButton(
-            onPressed: () {
-              setState(() {
-                Navigator.of(context).pushNamed('./');
-              });
-            },
+            onPressed: () {},
             child: Icon(Icons.message),
           ),
         ),
