@@ -1,8 +1,11 @@
+import 'package:bankapp/components/signin.dart';
+import 'package:bankapp/main.dart';
 import 'package:faker/faker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class Chatapp extends StatelessWidget{
+class Chatapp extends StatelessWidget {
+  final logouts = false;
   var isonclick = false;
 
   var faker = new Faker();
